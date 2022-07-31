@@ -25,7 +25,7 @@ $(document).ready(function() {
 
                         var tr_str = "<tr>"+
                             "<td><input type='text' value='" + comment + "' id='comment_"+id+"' class=\"form-control registerInput\"></td>" +
-                            "<td class=\"text-center\"><button value='Update' data-id='"+id+"' type='button' class='btn btn-light btn-sm commentsButton'>\ UPADATE </button> <button type='button' value='Delete' class='btn btn-light btn-sm commentsButton' data-id='"+id+"' >\n DELETE </button></button></td>"+
+                            "<td class=\"text-center\"><button value='Update' data-id='"+id+"' type='button' class='btn btn-light btn-sm commentsButton update'>\ UPADATE </button> <button type='button' value='Delete' class='btn btn-light btn-sm commentsButton delete' data-id='"+id+"'>\n DELETE </button></button></td>"+
                             "</tr>";
 
                         $("#contactTable tbody").append(tr_str);
@@ -95,7 +95,7 @@ $(document).ready(function() {
 
                         var tr_str = "<tr>"+
                             "<td><input type='text' value='" + comment + "' id='comment"+id+"' class=\"form-control registerInput\"></td>" +
-                            "<td class=\"text-center\"><button value='Update' data-id='"+id+"' type='button' class='btn btn-light btn-sm commentsButton'>\ UPDATE </button> <button type='button' value='Delete' class='btn btn-light btn-sm commentsButton' data-id='"+id+"' >\n DELETE </button></button></td>"+
+                            "<td class=\"text-center\"><button value='Update' data-id='"+id+"' type='button' class='btn btn-light btn-sm commentsButton update'>\ UPDATE </button> <button type='button' value='Delete' class='btn btn-light btn-sm commentsButton delete' data-id='"+id+"'>\n DELETE </button></button></td>"+
                             "</tr>";
 
                         $("#commentTable tbody").append(tr_str);
