@@ -139,9 +139,3 @@ body {
     font-size: 18px;
     letter-spacing: 1px;
 }
-
-@media screen and (max-height: 668px) {
-    .align-self-center {
-        align-self: normal !important;
-    }
-}
