@@ -1,29 +1,37 @@
-# README #
+# Blog Site (PHP)
 
-This README would normally document whatever steps are necessary to get your application up and running.
+A web interface for a simple blog site, where can may register, sign in, view all blog entries, post new / edit existing / delete existing blog entry, add, edit and delete comments, and log out, done in Lavarel 9.
 
-### What is this repository for? ###
+## To start
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+Download this repository, and place it on the server to use and update the .env file.
 
-### How do I get set up? ###
+### Installation
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+Download vendor libraries with
 
-### Contribution guidelines ###
+```
+composer update
+```
 
-* Writing tests
-* Code review
-* Other guidelines
+run the migrations
 
-### Who do I talk to? ###
+```
+php artisan migrate
+```
 
-* Repo owner or admin
-* Other community or team contact
+## Developed on
+
+* [Laravel 9]
+* [PHP 8]
+* [HTML 5]
+* [CSS 3]
+* [Bootstrap 5]
+* [jQuery]
+* [VueJs]
+
+
+## Demo
+```
+https://xyz-blog-creator.herokuapp.com/
+```

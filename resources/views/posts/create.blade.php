@@ -23,39 +23,40 @@
         </div>
     @endif
 
-    <form action="{{ route('postStore') }}" method="POST" enctype="multipart/form-data" class="posts-form">
+    <form action="{{ route('postStore') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <div class="mb-3 row">
-            <label for="title" class="col-sm-2 col-form-label">Title</label>
-            <div class="col-sm-10">
-                <input required type="text" id='title' placeholder="Title" class="form-control registerInput" name="title">
-                @error('title')
-                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                @enderror
+        <div class="container">
+            <div class="mb-3 row">
+                <label for="title" class="col-sm-3 col-form-label">Title</label>
+                <div class="col-sm-9">
+                    <input required type="text" id='title' placeholder="Title" class="form-control registerInput" name="title">
+                    @error('title')
+                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+
+            <div class="mb-3 row">
+                <label for="title" class="col-sm-3 col-form-label">Content</label>
+                <div class="col-sm-9">
+                    <textarea id="content" name="content" rows="10" class="form-control registerInput" placeholder="Add your content..." required></textarea>
+                    @error('content')
+                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+
+
+            <div class="mb-3 row text-center">
+                <div class="col-sm-4">
+                </div>
+                <div class="col-sm-4">
+                    <button type="submit" class="btn btn-light btn-lg postButton">CREATE</button>
+                </div>
+                <div class="col-sm-4">
+                </div>
             </div>
         </div>
-
-        <div class="mb-3 row">
-            <label for="title" class="col-sm-2 col-form-label">Content</label>
-            <div class="col-sm-10">
-                <textarea id="content" name="content" rows="10" class="form-control registerInput" placeholder="Add your content..." required></textarea>
-                @error('content')
-                <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
-                @enderror
-            </div>
-        </div>
-
-
-        <div class="mb-3 row text-center">
-            <div class="col-sm-4">
-            </div>
-            <div class="col-sm-4">
-                <button type="submit" class="btn btn-light btn-lg postButton">CREATE</button>
-            </div>
-            <div class="col-sm-4">
-            </div>
-        </div>
-
     </form>
 
     <br>
