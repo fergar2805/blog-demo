@@ -31,7 +31,7 @@
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" type="button" :class='[{ active: isDisabled("signin") }]' @click='setView("signin")'>SIGN IN</button>
                 </li>
-                <li class="nav-item" role="presentation">
+                <li class="nav-item" role="presentation" style="margin-left: 5px">
                     <button class="nav-link" type="button" :class='[{ active: isDisabled("register") }]' @click='setView("register")'>REGISTER</button>
                 </li>
             </ul>
