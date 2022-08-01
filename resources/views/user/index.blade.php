@@ -26,7 +26,7 @@
         <h1 class="text-center indexTitle">REGISTER</h1>
 
 
-        <div id="app" v-cloak>
+        <div id="app" v-cloak class="col-12 col-lg-5">
             <ul class="nav nav-tabs indexTabs" id="myTab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link" type="button" :class='[{ active: isDisabled("signin") }]' @click='setView("signin")'>SIGN IN</button>

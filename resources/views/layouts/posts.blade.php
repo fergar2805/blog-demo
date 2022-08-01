@@ -12,7 +12,7 @@
     </head>
     <body>
         <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
-            <div class="posts">
+            <div class="posts col-12 col-lg-5">
                 <div class="container">
                     @yield('content')
                 </div>
