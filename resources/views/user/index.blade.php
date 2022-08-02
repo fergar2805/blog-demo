@@ -155,7 +155,7 @@
                             <div class="mb-3 row">
                                 <label for="password" class="col-sm-3 col-form-label">Password</label>
                                 <div class="col-sm-9">
-                                    <input required v-model='user.password' type="password" id='password' placeholder="password" class="form-control registerInput" name="password">
+                                    <input required v-model='user.password' type="password" id='password' placeholder="Password" class="form-control registerInput" name="password">
                                 </div>
                             </div>
 
