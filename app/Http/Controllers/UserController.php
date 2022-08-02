@@ -18,7 +18,7 @@ class UserController extends Controller
     public function index()
     {
         if (Auth::user()) {
-            return view('posts.index');
+            return redirect()->route('post');
         } else {
             return view('user.index');
         }
