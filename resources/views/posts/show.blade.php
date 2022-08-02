@@ -46,7 +46,7 @@
         <table id='commentTable' class="table table-dark">
             <tbody>
             <tr>
-                <td><textarea type='text' id='comment' class="form-control registerInput" rows="2"></textarea></td>
+                <td style="width: 75%"><textarea type='text' id='comment' class="form-control registerInput" rows="2"></textarea></td>
                 <td class="text-center" style="text-align: center;vertical-align: middle;"><button type='button' id='addComment' value='Add' class="btn btn-light btn-sm commentsButton">
                          ADD</button>
                 </td>

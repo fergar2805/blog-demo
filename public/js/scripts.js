@@ -24,7 +24,7 @@ $(document).ready(function() {
                         }
 
                         var tr_str = "<tr>"+
-                            "<td><textarea type='text' id='comment' class=\"form-control registerInput\" rows=\"2\" id='comment_"+id+"'>"+ comment +"</textarea></td>" +
+                            "<td style=\"width: 75%\"><textarea type='text' class=\"form-control registerInput\" rows=\"2\" id='comment_"+id+"'>"+ comment +"</textarea></td>" +
                             "<td class=\"text-center\" style=\"text-align: center;vertical-align: middle;\"><button value='Update' data-id='"+id+"' type='button' class='btn btn-light btn-sm commentsButton update'>\ UPADATE </button> <button type='button' value='Delete' class='btn btn-light btn-sm commentsButton delete' data-id='"+id+"'>\n DELETE </button></button></td>"+
                             "</tr>";
 
@@ -44,7 +44,6 @@ $(document).ready(function() {
     $(document).on("click", ".update" , function() {
         var editId = $(this).data('id');
         var comment = $('#comment'+ editId).val();
-
         if(comment != '') {
             $.ajax({
                 url: '/comment/updateComment',
@@ -94,7 +93,7 @@ $(document).ready(function() {
                         var comment = response['data'][i].comment;
 
                         var tr_str = "<tr>"+
-                            "<td><textarea type='text' id='comment' class=\"form-control registerInput\" rows=\"2\" id='comment"+id+"'>"+ comment +"</textarea></td>" +
+                            "<td style=\"width: 75%\"><textarea type='text' class=\"form-control registerInput\" rows=\"2\" id='comment"+id+"'>"+ comment +"</textarea></td>" +
                             "<td class=\"text-center\" style=\"text-align: center;vertical-align: middle;\"><button value='Update' data-id='"+id+"' type='button' class='btn btn-light btn-sm commentsButton update'>\ UPDATE </button> <button type='button' value='Delete' class='btn btn-light btn-sm commentsButton delete' data-id='"+id+"'>\n DELETE </button></button></td>"+
                             "</tr>";
 
