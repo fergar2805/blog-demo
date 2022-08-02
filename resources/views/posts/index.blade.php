@@ -42,12 +42,9 @@
                 </tr>
             </thead>
             <tbody>
-                @php
-                    $i = 0;
-                @endphp
-                @foreach($posts as $post)
+                @foreach($posts as $key => $post)
                     <tr>
-                        <th scope="row">{{ ++$i }}</th>
+                        <th scope="row">{{ $posts->firstItem() + $key }}</th>
                         <td class="shortTitle">{{ $post->title }}</td>
                         <td>{{ $post->user->getFullName() }}</td>
                         <td class="text-center">
