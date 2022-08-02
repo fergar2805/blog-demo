@@ -14,6 +14,7 @@ class CommentController extends Controller
     public function getComments(int $postId)
     {
         $comments['data'] = Comments::where('post_id', $postId)
+            ->orderBy('id', 'desc')
             ->get();
 
         echo json_encode($comments);

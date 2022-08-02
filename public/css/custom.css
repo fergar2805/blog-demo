@@ -131,6 +131,7 @@ body {
 .postCard {
     font-family: SharpSans-Medium;
     border-radius: 0;
+    color: #000000;
 }
 
 .commentsButton {

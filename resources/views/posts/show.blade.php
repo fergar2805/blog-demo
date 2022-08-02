@@ -20,15 +20,15 @@
 
     <br>
 
-    <div class="card text-bg-dark postCard">
-        <div class="card-header">
-            {{ $post->title }}<br>
+    <div class="card postCard">
+        <div class="card-header" style="border-bottom: 0">
+            <h1>{{ $post->title }}</h1>
         </div>
         <div class="card-body">
             {{ $post->content }}
         </div>
-        <div class="card-footer">
-            by: {{ $post->user->getFullName() }}
+        <div class="card-footer" style="border-top: 0">
+            <small><cite title="Source Title">by: {{ $post->user->getFullName() }}</cite></small>
         </div>
     </div>
 
@@ -46,8 +46,8 @@
         <table id='commentTable' class="table table-dark">
             <tbody>
             <tr>
-                <td><input type='text' id='comment' class="form-control registerInput"></td>
-                <td class="text-center"><button type='button' id='addComment' value='Add' class="btn btn-light btn-sm commentsButton">
+                <td><textarea type='text' id='comment' class="form-control registerInput" rows="2"></textarea></td>
+                <td class="text-center" style="text-align: center;vertical-align: middle;"><button type='button' id='addComment' value='Add' class="btn btn-light btn-sm commentsButton">
                          ADD</button>
                 </td>
             </tr>
