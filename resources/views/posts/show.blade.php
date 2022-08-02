@@ -25,7 +25,7 @@
             <h1>{{ $post->title }}</h1>
         </div>
         <div class="card-body">
-            {{ $post->content }}
+            {!! nl2br(e($post->content)) !!}
         </div>
         <div class="card-footer" style="border-top: 0">
             <small><cite title="Source Title">by: {{ $post->user->getFullName() }}</cite></small>

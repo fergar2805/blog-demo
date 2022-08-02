@@ -140,3 +140,10 @@ body {
     font-size: 18px;
     letter-spacing: 1px;
 }
+
+.table .shortTitle {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 200px;
+}

@@ -48,7 +48,7 @@
                 @foreach($posts as $post)
                     <tr>
                         <th scope="row">{{ ++$i }}</th>
-                        <td>{{ $post->title }}</td>
+                        <td class="shortTitle">{{ $post->title }}</td>
                         <td>{{ $post->user->getFullName() }}</td>
                         <td class="text-center">
                             <form action="{{ route('postDelete', $post->id) }}" method="Post">
