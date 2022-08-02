@@ -14,17 +14,17 @@ $(document).ready(function() {
                 url: '/comment/addComment',
                 type: 'POST',
                 data: {_token: CSRF_TOKEN, comment: comment, postId: postId},
-                success: function(response){
-                    if(response > 0){
+                success: function(response) {
+                    if(response > 0) {
                         var id = response;
                         var findnorecord = $('#contactTable tr.norecord').length;
 
-                        if(findnorecord > 0){
+                        if(findnorecord > 0) {
                             $('#contactTable tr.norecord').remove();
                         }
 
                         var tr_str = "<tr>"+
-                            "<td style=\"width: 75%\"><textarea type='text' class=\"form-control registerInput\" rows=\"2\" id='comment_"+id+"'>"+ comment +"</textarea></td>" +
+                            "<td style=\"width: 75%\"><textarea type='text' class=\"form-control registerInput\" rows=\"2\" id='comment"+id+"'>"+ comment +"</textarea></td>" +
                             "<td class=\"text-center\" style=\"text-align: center;vertical-align: middle;\"><button value='Update' data-id='"+id+"' type='button' class='btn btn-light btn-sm commentsButton update'>\ UPADATE </button> <button type='button' value='Delete' class='btn btn-light btn-sm commentsButton delete' data-id='"+id+"'>\n DELETE </button></button></td>"+
                             "</tr>";
 
@@ -44,13 +44,14 @@ $(document).ready(function() {
     $(document).on("click", ".update" , function() {
         var editId = $(this).data('id');
         var comment = $('#comment'+ editId).val();
+
         if(comment != '') {
             $.ajax({
                 url: '/comment/updateComment',
                 type: 'post',
                 data: {_token: CSRF_TOKEN, editId: editId, comment: comment},
 
-                success: function(response){
+                success: function(response) {
                     alert(response);
                 }
             });
@@ -66,7 +67,7 @@ $(document).ready(function() {
         $.ajax({
             url: '/comment/deleteComment/' + deleteId,
             type: 'get',
-            success: function(response){
+            success: function(response) {
                 $(el).closest( "tr" ).remove();
                 alert(response);
             }
@@ -88,7 +89,7 @@ $(document).ready(function() {
                 }
 
                 if (len > 0) {
-                    for(var i=0; i<len; i++){
+                    for(var i=0; i<len; i++) {
                         var id = response['data'][i].id;
                         var comment = response['data'][i].comment;
 
@@ -99,7 +100,7 @@ $(document).ready(function() {
 
                         $("#commentTable tbody").append(tr_str);
                     }
-                } else{
+                } else {
                     var tr_str = "<tr class='norecord'>" +
                         "<td align='center' colspan='8'>No comments found.</td>" +
                         "</tr>";

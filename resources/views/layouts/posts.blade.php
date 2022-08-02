@@ -11,12 +11,14 @@
         @stack('scripts')
     </head>
     <body>
+        <br><br>
         <div class="d-flex flex-column min-vh-100 justify-content-center align-items-center">
-            <div class="posts col-12 col-lg-5">
+            <div class="posts col-11 col-lg-5">
                 <div class="container">
                     @yield('content')
                 </div>
             </div>
         </div>
+        <br><br>
     </body>
 </html>
