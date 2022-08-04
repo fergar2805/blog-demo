@@ -29,9 +29,3 @@ php artisan migrate
 * [Bootstrap 5]
 * [jQuery]
 * [VueJs]
-
-
-## Demo
-```
-https://xyz-blog-creator.herokuapp.com/
-```
