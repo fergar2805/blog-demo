@@ -29,3 +29,8 @@ php artisan migrate
 * [Bootstrap 5]
 * [jQuery]
 * [VueJs]
+
+## Demo
+```
+https://desolate-escarpment-31351.herokuapp.com/
+```
