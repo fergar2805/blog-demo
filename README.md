@@ -32,4 +32,5 @@ php artisan migrate
 
 ## Demo
 ```
+https://web-production-7fbc.up.railway.app/
 ```
