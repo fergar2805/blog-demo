@@ -32,5 +32,4 @@ php artisan migrate
 
 ## Demo
 ```
-https://desolate-escarpment-31351.herokuapp.com/
 ```
